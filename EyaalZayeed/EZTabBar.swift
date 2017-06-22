@@ -9,10 +9,25 @@
 import Foundation
 import UIKit
 
-class EZTabBar: UITabBar {
-    
-    
-    
-    
-    
-}
+//class EZTabBar: UITabBar {
+//    
+//    required init(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)!
+//        
+//        open var tintColor: UIColor!
+//        
+//        @available(iOS 7.0, *)
+//      barTintColor =  UIColor.
+//        itemWidth =  40
+//        
+//    
+//
+//    }
+//    required override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        
+//    }
+//    
+//    
+//    
+//}

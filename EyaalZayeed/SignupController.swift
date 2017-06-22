@@ -29,7 +29,7 @@ class SignupController: UIAppViewController,UITableViewDataSource, UITableViewDe
     }
     func initialUISetup()
     {
-        
+        addStatusBar()
         self.automaticallyAdjustsScrollViewInsets =  false
         self.navigationController?.navigationBar.isHidden =  true
         
@@ -81,8 +81,7 @@ class SignupController: UIAppViewController,UITableViewDataSource, UITableViewDe
             var cell = tableView.dequeueReusableCell(withIdentifier: "signupFormTableCell")! as! SignupFormTableCell
             cell.formTextField.delegate = self
             cell.formTextField.leftImage = UIImage(named: (leftImages?[indexPath.row])!)
-            cell.formTextField.attributedPlaceholder = NSAttributedString(string: (textFieldPlaceholders?[indexPath.row])!,
-                                                                          attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+            cell.formTextField.attributedPlaceholder = NSAttributedString(string: (textFieldPlaceholders?[indexPath.row])!,attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
             
             return cell
         case 1:

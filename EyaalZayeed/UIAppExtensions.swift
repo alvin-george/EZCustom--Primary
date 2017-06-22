@@ -77,4 +77,48 @@ extension UITextField{
         layer.borderColor = borderColour?.cgColor
     }
 }
-
+extension UISearchBar {
+    
+    func setMagnifyingGlassColorTo(color: UIColor)
+    {
+        let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField
+        let glassIconView = textFieldInsideSearchBar?.leftView as? UIImageView
+        glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
+        glassIconView?.tintColor = color
+    }
+    
+    func setPlaceholderTextColorTo(color: UIColor)
+    {
+        let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = color
+        let textFieldInsideSearchBarLabel = textFieldInsideSearchBar!.value(forKey: "placeholderLabel") as? UILabel
+        textFieldInsideSearchBarLabel?.textColor = color
+    }
+    var textColor:UIColor? {
+        get {
+            if let textField = self.value(forKey: "searchField") as?
+                UITextField  {
+                return textField.textColor
+            } else {
+                return nil
+            }
+        }
+        
+        set (newValue) {
+            if let textField = self.value(forKey: "searchField") as?
+                UITextField  {
+                textField.textColor = newValue
+            }
+        }
+    }
+    
+    
+    func change(textFont : UIFont?) {
+        
+        for view : UIView in (self.subviews[0]).subviews {
+            
+            if let textField = view as? UITextField {
+                textField.font = textFont
+            }
+        }
+    } }

@@ -8,9 +8,10 @@
 
 import UIKit
 
-class StudentSubjectsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class StudentSubjectsController: UIAppViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var subjectsTableView: UITableView!
+
     
     var topItems = [String]()
     var subItems = [String]()
@@ -27,6 +28,7 @@ class StudentSubjectsController: UIViewController, UITableViewDelegate, UITableV
     }
     override func viewWillAppear(_ animated: Bool) {
         
+        self.addStatusBar()
         self.addInitialUIChanges()
         self.title = "SUBJECTS"
         
@@ -129,6 +131,13 @@ class StudentSubjectsController: UIViewController, UITableViewDelegate, UITableV
         }, completion: nil)
         
     }
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        
+        // self.navigationController?.popViewController(animated: true)
+        // _ = navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

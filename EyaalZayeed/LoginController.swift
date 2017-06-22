@@ -10,14 +10,16 @@ import UIKit
 import Foundation
 
 class LoginController: UIAppViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var loginTableview: UITableView!
+    
+    var selectedUserModule:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initialUISetup()
-
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -27,8 +29,8 @@ class LoginController: UIAppViewController, UITableViewDataSource, UITableViewDe
     override func viewDidAppear(_ animated: Bool) {
         //   present(UIStoryboard(name: "StudentModule", bundle: nil).instantiateViewController(withIdentifier: "studentSubjectsController") as UIViewController, animated: true, completion: nil)
         
-                 //  present(UIStoryboard(name: "StudentModule", bundle: nil).instantiateViewController(withIdentifier: "studentDashBoardController") as UIViewController, animated: true, completion: nil)
- 
+        //  present(UIStoryboard(name: "StudentModule", bundle: nil).instantiateViewController(withIdentifier: "studentDashBoardController") as UIViewController, animated: true, completion: nil)
+        
     }
     func initialUISetup()
     {
@@ -42,13 +44,29 @@ class LoginController: UIAppViewController, UITableViewDataSource, UITableViewDe
         
         if (indexPath.row == 0)
         {
-            return 190
-        }
+            return 190  }
+            
         else
         {
-          return 250
+            if (selectedUserModule != nil)
+            {
+                switch selectedUserModule {
+                case USER_TYPE.STUDENT_MODULE.rawValue:
+                    return 195
+                case USER_TYPE.TEACHER_MODULE.rawValue:
+                    return 195
+                case USER_TYPE.PARENT_MODULE.rawValue:
+                    return 250
+                default:
+                    return 190
+                }
+            }
+            else { return 190  }
+            
+            return 190
+            
         }
-
+        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -72,13 +90,35 @@ class LoginController: UIAppViewController, UITableViewDataSource, UITableViewDe
             
             cell.signupButton.addTarget(self, action:#selector(LoginController.signupButtonClicked(_:)), for: .touchUpInside)
             
+            cell.loginButton.addTarget(self, action:#selector(LoginController.loginButtonClicked(_:)), for: .touchUpInside)
+            
+            
             return cell
         }
-       
+        
     }
     func signupButtonClicked(_ sender: UIButton)
     {
         self.performSegue(withIdentifier: "segueToSignupController", sender: self)
+        
+    }
+    func loginButtonClicked(_ sender: UIButton)
+    {
+        if (selectedUserModule != nil)
+        {
+        
+        switch selectedUserModule {
+            
+        case USER_TYPE.STUDENT_MODULE.rawValue:
+            present(UIStoryboard(name: STORYBOARD_TYPE.STUDENT_MODULE.rawValue, bundle: nil).instantiateViewController(withIdentifier: "studentDashBoardController") as UIViewController, animated: true, completion: nil)
+        case USER_TYPE.TEACHER_MODULE.rawValue:
+            present(UIStoryboard(name: STORYBOARD_TYPE.TEACHER_MODULE.rawValue, bundle: nil).instantiateViewController(withIdentifier: "teacherDashboardController") as UIViewController, animated: true, completion: nil)
+        case USER_TYPE.PARENT_MODULE.rawValue:
+            present(UIStoryboard(name: STORYBOARD_TYPE.PARENT_MODULE.rawValue, bundle: nil).instantiateViewController(withIdentifier: "parentDashboardController") as UIViewController, animated: true, completion: nil)
+        default:
+            break
+        }
+        }
         
     }
     @IBAction func userModuleSelected(_ sender: UIButton) {
@@ -87,14 +127,32 @@ class LoginController: UIAppViewController, UITableViewDataSource, UITableViewDe
         
         switch sender.tag {
         case 0:
-            <#code#>
+            highlightStudentModule()
         case 1:
-            <#code#>
+            highlightTeacherModule()
         case 2:
-            <#code#>
+            highlightParentModule()
         default:
-            <#code#>
+            break
         }
+        self.loginTableview.reloadData()
+        
+        print("selcted Moduele  : \(selectedUserModule)")
+        
+    }
+    func highlightStudentModule()
+    {
+        selectedUserModule = USER_TYPE.STUDENT_MODULE.rawValue
+        
+    }
+    func highlightTeacherModule(){
+        
+        selectedUserModule = USER_TYPE.TEACHER_MODULE.rawValue
+        
+    }
+    func highlightParentModule() {
+        
+        selectedUserModule =  USER_TYPE.PARENT_MODULE.rawValue
         
     }
     override func didReceiveMemoryWarning() {

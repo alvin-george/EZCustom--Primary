@@ -9,28 +9,47 @@
 import UIKit
 import Foundation
 
-class StudentDashBoardController: UIAppViewController {
+class StudentDashBoardController: UIAppViewController, StudentSlideMenuDelegate, CircleMenuDelegate {
     
-    let numberOfThumbs = 7
-    var circle: Circle!
-    var circleMenuImageArray:[String]!
+    //circle Menu
+    var buttonTitleLabel:UILabel!
+    var circleMenuImageNameArray:[String]!
     var circleMenuTitleArray:[String]!
     
+    @IBOutlet weak var circleCenterButton: CircleMenu!
+    @IBOutlet weak var sideMenuButton: UIButton!
+    @IBOutlet weak var studentNameLabel: EZLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialUISetup()
         addStatusBar()
-        prepareCustomCircleMenu()
         updateArrays()
     }
     override func viewWillAppear(_ animated: Bool) {
-        
+        initialUISetup()
         updateArrays()
+        self.circleCenterButton.sendActions(for: .touchUpInside)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+       // self.circleCenterButton.sendActions(for: .touchUpInside)
+    }
+    func initialUISetup()
+    {
+        addStatusBar()
+        self.automaticallyAdjustsScrollViewInsets = false
+        sideMenuButton.addTarget(self, action: #selector(StudentDashBoardController.onSlideMenuButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        circleCenterButton.delegate = self
+        
+        
+        
     }
     func updateArrays()
     {
-        circleMenuImageArray = ["profile","contact","subjects","report","notification","activity","time_table"]
-        circleMenuTitleArray = ["PROFILE","CONTACT","SUBJECTS","REPORTS","NOTIFICATIONS","ACTIVITY","TIME TABLE"]
+        circleMenuImageNameArray = ["profile","subjects","report","notification","activity","time_table"]
+        circleMenuTitleArray = ["Profile","Subjects","Report","Notification","Activity","TimeTable"]
+        circleCenterButton.buttonsCount = circleMenuImageNameArray.count
+        //circleCenterButton.tintColor = appUIColor_First
     }
     func navigateToSubViews(selctedMenuItem:Int)
     {
@@ -42,87 +61,108 @@ class StudentDashBoardController: UIAppViewController {
         }
     }
     
-    func prepareCustomCircleMenu() {
-        circle = Circle(with: CGRect(x: 10, y: 90, width: 300, height: 300), numberOfSegments: numberOfThumbs, ringWidth: 60.0, isRotating: true, iconWidth: 70, iconHeight: 70)
-        circle?.dataSource = self
-        circle?.delegate = self
+    func onSlideMenuButtonPressed(_ sender : UIButton){
         
-        let overlay = CircleOverlayView(with: circle)
-        circle?.overlayView?.overlayThumb.arcColor = UIColor.clear
-        circle?.circleColor = UIColor.clear
-        overlay?.userImage?.image =  UIImage(named:"student_round")
-        overlay?.userNameLabel?.text = "Sample User 1"
-        
-        // Customize thumbs
-        for (_, thumb) in (circle?.thumbs.enumerated())! {
-            let thumb = thumb as! CircleThumb
+        if (sender.tag == 10)        {
+            // To Hide Menu If it already there
+            self.slideMenuItemSelectedAtIndex(-1);
             
-            thumb.iconView.highlightedIconColor = UIColor.clear
-            thumb.iconView.isSelected = false
-            thumb.iconView.isHidden = false
-            thumb.separatorStyle = .none
-            thumb.isGradientFill = false
-            thumb.arcColor = UIColor.clear
+            sender.tag = 0;
             
-            //thumb.backgroundColor =  UIColor.clear
+            let viewMenuBack : UIView = view.subviews.last!
             
-            // Add circular border to icon
-            thumb.iconView.layer.borderWidth = 1
-            thumb.iconView.layer.masksToBounds = false
-            thumb.iconView.layer.borderColor = UIColor.white.cgColor
-            thumb.iconView.layer.cornerRadius = thumb.iconView.frame.height/2
-            //thumb.iconView.layer.backgroundColor = UIColor.clear.cgColor
-            thumb.iconView.clipsToBounds = true
-
-
-        
+            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                var frameMenu : CGRect = viewMenuBack.frame
+                frameMenu.origin.x = -1 * UIScreen.main.bounds.size.width
+                viewMenuBack.frame = frameMenu
+                viewMenuBack.layoutIfNeeded()
+                viewMenuBack.backgroundColor = UIColor.clear
+            }, completion: { (finished) -> Void in
+                viewMenuBack.removeFromSuperview()
+            })
+            
+            return
         }
         
-        // Center circle and overlay
-        overlay!.center = view.center
-        circle?.center = view.center
+        sender.isEnabled = false
+        sender.tag = 10
         
-        // Add circle and overlay to view
-        self.view.addSubview(circle!)
-        self.view.addSubview(overlay!)
+        let menuVC : StudentSliderMenuController = UIStoryboard(name: STORYBOARD_TYPE.STUDENT_MODULE.rawValue, bundle: nil).instantiateViewController(withIdentifier: "studentSliderMenuController") as! StudentSliderMenuController
+        menuVC.btnMenu = sender
+        menuVC.delegate = self
+        self.view.addSubview(menuVC.view)
+        self.addChildViewController(menuVC)
+        menuVC.view.layoutIfNeeded()
+        
+        
+        menuVC.view.frame=CGRect(x: 0 - UIScreen.main.bounds.size.width, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
+        
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+            menuVC.view.frame=CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
+            sender.isEnabled = true
+        }, completion:nil)
+        
+    }
+    func slideMenuItemSelectedAtIndex(_ index: Int32) {
+        // let topViewController : UIViewController = self.navigationController!.topViewController!
+        // print("View Controller is : \(topViewController) \n", terminator: "")
+        
     }
     
-}
-
-
-extension StudentDashBoardController: CircleDelegate, CircleDataSource {
-    
-    func circle(_ circle: Circle, didMoveTo segment: Int, thumb: CircleThumb) {
-        thumb.backgroundColor =  UIColor.clear
-        thumb.iconView.isHidden =  false
+    // MARK: <CircleMenuDelegate>
+    func circleMenu(_ circleMenu: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
         
-        thumb.isHidden =  false
+        circleMenu.buttonsCount =  circleMenuImageNameArray.count
+        circleMenu.distance =  Float(self.view.frame.size.width/2 - 10)
+        circleMenu.duration = 0.3
         
-        thumb.iconView.image = UIImage(named: circleMenuImageArray[segment] as String)!
+        button.setBackgroundImage(UIImage(named: circleMenuImageNameArray[atIndex]), for: .normal)
         
-        circle.overlayView?.menuTitleLabel?.text = circleMenuTitleArray[segment] as String
+        // set highlited image
+        let highlightedImage  = UIImage(named: circleMenuImageNameArray[atIndex])?.withRenderingMode(.alwaysTemplate)
+        button.setImage(highlightedImage, for: .highlighted)
         
-        //        thumb.iconView.isSelected = false
         
-        // Rotate selected icon
-        UIView.animate(withDuration: 0.2, animations: { () -> Void in
-            thumb.iconView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-        })
+        buttonTitleLabel = UILabel(frame: CGRect(x: button.frame.origin.x - button.frame.midX , y: button.frame.origin.y + (button.frame.midX + 10), width: button.frame.size.width * 2, height: button.frame.size.height))
+        buttonTitleLabel?.text = circleMenuTitleArray[atIndex]
+        buttonTitleLabel?.font = UIFont(name: "Arial", size: 12.0)
+        buttonTitleLabel?.textAlignment =  .center
+        buttonTitleLabel?.textColor =  UIColor.black
+        buttonTitleLabel?.allowsDefaultTighteningForTruncation =  true
+        button.addSubview(buttonTitleLabel!)
         
-        UIView.animate(withDuration: 0.2, delay: 0.15, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
-            thumb.iconView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi * 2))
-        }, completion: nil)
     }
     
-    func circle(_ circle: Circle, iconForThumbAt row: Int) -> UIImage {
-        //        let thumb = circle.thumbs[row] as! CircleThumb
-        //        thumb.iconView.isSelected = false
+    func circleMenu(_ circleMenu: CircleMenu, buttonWillSelected button: UIButton, atIndex: Int) {
+        buttonTitleLabel.text = ""
+        button.addSubview(buttonTitleLabel!)
         
-        circle.overlayView?.overlayThumb.isHidden =  false
-        // thumb.iconView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: (DispatchTime.now() + DispatchTimeInterval.seconds(Int(1)))){
+            
+            switch atIndex {
+            case 0:
+                self.performSegue(withIdentifier: "segueToStudentProfileController", sender: self)
+ 
+            case 1:
+                self.performSegue(withIdentifier: "segueToStudentSubjectsController", sender: self)
+            case 2:
+                self.performSegue(withIdentifier: "segueToStudentReportController", sender: self)
+            case 3:
+                self.performSegue(withIdentifier: "segueToStudentNotificationsController", sender: self)
+            case 4:
+                self.performSegue(withIdentifier: "segueToStudentActivityController", sender: self)
+            case 5:
+                self.performSegue(withIdentifier: "segueToStudentTimeTableController", sender: self)
+            default:
+                break;
+            }
+        }
         
-        return UIImage(named: circleMenuImageArray[row] as String)!
     }
     
+    func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int) {
+        
+        
+    }
 }
 

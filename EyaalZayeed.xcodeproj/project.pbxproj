@@ -56,16 +56,30 @@
 		187029501EF1747700E7A4EF /* UIAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870294F1EF1747700E7A4EF /* UIAppViewController.swift */; };
 		187029531EF1756300E7A4EF /* UIAppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187029521EF1756300E7A4EF /* UIAppExtensions.swift */; };
 		187029551EF1788A00E7A4EF /* EZTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187029541EF1788A00E7A4EF /* EZTextField.swift */; };
+		1876BFD51EF95D0F004436DA /* StudentProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876BFD41EF95D0F004436DA /* StudentProfileTableCell.swift */; };
+		1876BFD71EF95E69004436DA /* StudentDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876BFD61EF95E69004436DA /* StudentDetailTableCell.swift */; };
+		1876BFD91EF962F9004436DA /* EZTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876BFD81EF962F9004436DA /* EZTextView.swift */; };
+		1876BFDB1EF96831004436DA /* EZUIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876BFDA1EF96831004436DA /* EZUIElements.swift */; };
+		18919C431EF3DF68006E3D12 /* SideMenuProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919C411EF3DF68006E3D12 /* SideMenuProfileTableCell.swift */; };
+		18919C441EF3DF68006E3D12 /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919C421EF3DF68006E3D12 /* SideMenuTableCell.swift */; };
+		18919C471EF3EE63006E3D12 /* EZLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919C461EF3EE63006E3D12 /* EZLabel.swift */; };
+		18919C491EF3F184006E3D12 /* ParentSliderMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919C481EF3F184006E3D12 /* ParentSliderMenuController.swift */; };
+		18919C4B1EF3F198006E3D12 /* TeacherSliderMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919C4A1EF3F198006E3D12 /* TeacherSliderMenuController.swift */; };
+		18919C4D1EF3F1AB006E3D12 /* StudentSliderMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919C4C1EF3F1AB006E3D12 /* StudentSliderMenuController.swift */; };
+		18919C4F1EF4050D006E3D12 /* EZButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18919C4E1EF4050D006E3D12 /* EZButton.swift */; };
+		18B50A561EFAAF1400232E80 /* ContactChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B50A551EFAAF1400232E80 /* ContactChatTableCell.swift */; };
 		18CFD6EB1EEFF24800D590F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CFD6EA1EEFF24800D590F3 /* Main.storyboard */; };
 		18CFD6ED1EEFF59000D590F3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFD6EC1EEFF58F00D590F3 /* LoginController.swift */; };
 		18CFD6F01EEFFC2B00D590F3 /* SubjectsHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFD6EF1EEFFC2B00D590F3 /* SubjectsHeaderTableCell.swift */; };
 		18CFD6F21EEFFDC600D590F3 /* SubjectsDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFD6F11EEFFDC600D590F3 /* SubjectsDetailTableCell.swift */; };
 		18CFD6F51EF0297A00D590F3 /* EZTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFD6F41EF0297A00D590F3 /* EZTabBar.swift */; };
-		18DA13671EF25CFE00C2976F /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA13621EF25CFE00C2976F /* Circle.swift */; };
-		18DA13681EF25CFE00C2976F /* CircleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA13631EF25CFE00C2976F /* CircleGestureRecognizer.swift */; };
-		18DA13691EF25CFE00C2976F /* CircleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA13641EF25CFE00C2976F /* CircleIconView.swift */; };
-		18DA136A1EF25CFE00C2976F /* CircleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA13651EF25CFE00C2976F /* CircleOverlayView.swift */; };
-		18DA136B1EF25CFE00C2976F /* CircleThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA13661EF25CFE00C2976F /* CircleThumb.swift */; };
+		18D0CB1C1EF3B79B00E630F9 /* AppEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0CB1B1EF3B79B00E630F9 /* AppEnum.swift */; };
+		18D0CB1E1EF3C6A500E630F9 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0CB1D1EF3C6A500E630F9 /* HRToast+UIView.swift */; };
+		18DBCB341EFBA086003FF70A /* NotificationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBCB331EFBA086003FF70A /* NotificationTableCell.swift */; };
+		18DBCB581EFBB605003FF70A /* ActivityCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBCB571EFBB605003FF70A /* ActivityCollectionCell.swift */; };
+		18E9F9831EF7B7B300E4705C /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9F9801EF7B7B300E4705C /* CircleMenu.swift */; };
+		18E9F9841EF7B7B300E4705C /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9F9811EF7B7B300E4705C /* CircleMenuLoader.swift */; };
+		18E9F9851EF7B7B300E4705C /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9F9821EF7B7B300E4705C /* CircleMenuButton.swift */; };
 		18F6A81D1EEFDAEC001CD7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6A81C1EEFDAEC001CD7D8 /* AppDelegate.swift */; };
 		18F6A8251EEFDAEC001CD7D8 /* EyaalZayeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F6A8231EEFDAEC001CD7D8 /* EyaalZayeed.xcdatamodeld */; };
 		18F6A8271EEFDAEC001CD7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F6A8261EEFDAEC001CD7D8 /* Assets.xcassets */; };
@@ -145,16 +159,30 @@
 		1870294F1EF1747700E7A4EF /* UIAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAppViewController.swift; sourceTree = "<group>"; };
 		187029521EF1756300E7A4EF /* UIAppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAppExtensions.swift; sourceTree = "<group>"; };
 		187029541EF1788A00E7A4EF /* EZTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZTextField.swift; sourceTree = "<group>"; };
+		1876BFD41EF95D0F004436DA /* StudentProfileTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentProfileTableCell.swift; sourceTree = "<group>"; };
+		1876BFD61EF95E69004436DA /* StudentDetailTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDetailTableCell.swift; sourceTree = "<group>"; };
+		1876BFD81EF962F9004436DA /* EZTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZTextView.swift; sourceTree = "<group>"; };
+		1876BFDA1EF96831004436DA /* EZUIElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZUIElements.swift; sourceTree = "<group>"; };
+		18919C411EF3DF68006E3D12 /* SideMenuProfileTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuProfileTableCell.swift; sourceTree = "<group>"; };
+		18919C421EF3DF68006E3D12 /* SideMenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableCell.swift; sourceTree = "<group>"; };
+		18919C461EF3EE63006E3D12 /* EZLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZLabel.swift; sourceTree = "<group>"; };
+		18919C481EF3F184006E3D12 /* ParentSliderMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentSliderMenuController.swift; sourceTree = "<group>"; };
+		18919C4A1EF3F198006E3D12 /* TeacherSliderMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherSliderMenuController.swift; sourceTree = "<group>"; };
+		18919C4C1EF3F1AB006E3D12 /* StudentSliderMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentSliderMenuController.swift; sourceTree = "<group>"; };
+		18919C4E1EF4050D006E3D12 /* EZButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZButton.swift; sourceTree = "<group>"; };
+		18B50A551EFAAF1400232E80 /* ContactChatTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactChatTableCell.swift; sourceTree = "<group>"; };
 		18CFD6EA1EEFF24800D590F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		18CFD6EC1EEFF58F00D590F3 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		18CFD6EF1EEFFC2B00D590F3 /* SubjectsHeaderTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsHeaderTableCell.swift; sourceTree = "<group>"; };
 		18CFD6F11EEFFDC600D590F3 /* SubjectsDetailTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsDetailTableCell.swift; sourceTree = "<group>"; };
 		18CFD6F41EF0297A00D590F3 /* EZTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZTabBar.swift; sourceTree = "<group>"; };
-		18DA13621EF25CFE00C2976F /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
-		18DA13631EF25CFE00C2976F /* CircleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGestureRecognizer.swift; sourceTree = "<group>"; };
-		18DA13641EF25CFE00C2976F /* CircleIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleIconView.swift; sourceTree = "<group>"; };
-		18DA13651EF25CFE00C2976F /* CircleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleOverlayView.swift; sourceTree = "<group>"; };
-		18DA13661EF25CFE00C2976F /* CircleThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleThumb.swift; sourceTree = "<group>"; };
+		18D0CB1B1EF3B79B00E630F9 /* AppEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnum.swift; sourceTree = "<group>"; };
+		18D0CB1D1EF3C6A500E630F9 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
+		18DBCB331EFBA086003FF70A /* NotificationTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableCell.swift; sourceTree = "<group>"; };
+		18DBCB571EFBB605003FF70A /* ActivityCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollectionCell.swift; sourceTree = "<group>"; };
+		18E9F9801EF7B7B300E4705C /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenu.swift; sourceTree = "<group>"; };
+		18E9F9811EF7B7B300E4705C /* CircleMenuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuLoader.swift; sourceTree = "<group>"; };
+		18E9F9821EF7B7B300E4705C /* CircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuButton.swift; sourceTree = "<group>"; };
 		18F6A8191EEFDAEC001CD7D8 /* EyaalZayeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyaalZayeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6A81C1EEFDAEC001CD7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F6A8241EEFDAEC001CD7D8 /* EyaalZayeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EyaalZayeed.xcdatamodel; sourceTree = "<group>"; };
@@ -263,14 +291,46 @@
 		187029511EF1753F00E7A4EF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				18D0CB1D1EF3C6A500E630F9 /* HRToast+UIView.swift */,
 				187029521EF1756300E7A4EF /* UIAppExtensions.swift */,
+				18D0CB1B1EF3B79B00E630F9 /* AppEnum.swift */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		1876BFD31EF95CDC004436DA /* StudentProfile */ = {
+			isa = PBXGroup;
+			children = (
+				1876BFD41EF95D0F004436DA /* StudentProfileTableCell.swift */,
+				1876BFD61EF95E69004436DA /* StudentDetailTableCell.swift */,
+			);
+			name = StudentProfile;
+			sourceTree = "<group>";
+		};
+		18919C451EF3DF6D006E3D12 /* SliderMenu */ = {
+			isa = PBXGroup;
+			children = (
+				18919C411EF3DF68006E3D12 /* SideMenuProfileTableCell.swift */,
+				18919C421EF3DF68006E3D12 /* SideMenuTableCell.swift */,
+			);
+			name = SliderMenu;
+			sourceTree = "<group>";
+		};
+		18B50A541EFAAEE700232E80 /* Contact_chat */ = {
+			isa = PBXGroup;
+			children = (
+				18B50A551EFAAF1400232E80 /* ContactChatTableCell.swift */,
+			);
+			name = Contact_chat;
 			sourceTree = "<group>";
 		};
 		18CFD6EE1EEFFC0700D590F3 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				18DBCB321EFBA06B003FF70A /* Notification */,
+				18B50A541EFAAEE700232E80 /* Contact_chat */,
+				1876BFD31EF95CDC004436DA /* StudentProfile */,
+				18919C451EF3DF6D006E3D12 /* SliderMenu */,
 				187029441EF150E900E7A4EF /* Login */,
 				187029491EF1515100E7A4EF /* StudentSubjects */,
 				1870294C1EF1635D00E7A4EF /* Signup */,
@@ -284,6 +344,10 @@
 				18DA136C1EF27EEE00C2976F /* CircleMenu */,
 				18CFD6F41EF0297A00D590F3 /* EZTabBar.swift */,
 				187029541EF1788A00E7A4EF /* EZTextField.swift */,
+				18919C461EF3EE63006E3D12 /* EZLabel.swift */,
+				18919C4E1EF4050D006E3D12 /* EZButton.swift */,
+				1876BFD81EF962F9004436DA /* EZTextView.swift */,
+				1876BFDA1EF96831004436DA /* EZUIElements.swift */,
 			);
 			name = CustomUI;
 			sourceTree = "<group>";
@@ -291,13 +355,35 @@
 		18DA136C1EF27EEE00C2976F /* CircleMenu */ = {
 			isa = PBXGroup;
 			children = (
-				18DA13621EF25CFE00C2976F /* Circle.swift */,
-				18DA13631EF25CFE00C2976F /* CircleGestureRecognizer.swift */,
-				18DA13641EF25CFE00C2976F /* CircleIconView.swift */,
-				18DA13651EF25CFE00C2976F /* CircleOverlayView.swift */,
-				18DA13661EF25CFE00C2976F /* CircleThumb.swift */,
+				18E9F9801EF7B7B300E4705C /* CircleMenu.swift */,
+				18E9F9811EF7B7B300E4705C /* CircleMenuLoader.swift */,
+				18E9F9821EF7B7B300E4705C /* CircleMenuButton.swift */,
 			);
 			name = CircleMenu;
+			sourceTree = "<group>";
+		};
+		18DBCB321EFBA06B003FF70A /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				18DBCB331EFBA086003FF70A /* NotificationTableCell.swift */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+		18DBCB551EFBB5E7003FF70A /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				18DBCB561EFBB5F1003FF70A /* Activity */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		18DBCB561EFBB5F1003FF70A /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				18DBCB571EFBB605003FF70A /* ActivityCollectionCell.swift */,
+			);
+			name = Activity;
 			sourceTree = "<group>";
 		};
 		18F6A8101EEFDAEC001CD7D8 = {
@@ -358,6 +444,7 @@
 		18F6A84D1EEFDD0B001CD7D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18DBCB551EFBB5E7003FF70A /* CollectionViewCells */,
 				18F6A8281EEFDAEC001CD7D8 /* LaunchScreen.storyboard */,
 				18F6A84E1EEFDD88001CD7D8 /* TeacherModule.storyboard */,
 				18F6A8501EEFDD99001CD7D8 /* ParentModule.storyboard */,
@@ -389,6 +476,7 @@
 				184D853E1EF11FF2006BAF76 /* StudentActivityController.swift */,
 				184D85401EF12004006BAF76 /* StudentTimeTableController.swift */,
 				184D85421EF12012006BAF76 /* StudentProfileController.swift */,
+				18919C4C1EF3F1AB006E3D12 /* StudentSliderMenuController.swift */,
 			);
 			name = Student;
 			sourceTree = "<group>";
@@ -404,6 +492,7 @@
 				184D855C1EF12241006BAF76 /* TeacherActivityController.swift */,
 				184D855E1EF12251006BAF76 /* TeacherChildController.swift */,
 				182BA2EE1EF13CBF0061E807 /* TeacherDashboardController.swift */,
+				18919C4A1EF3F198006E3D12 /* TeacherSliderMenuController.swift */,
 			);
 			name = Teacher;
 			sourceTree = "<group>";
@@ -419,6 +508,7 @@
 				184D854E1EF1216A006BAF76 /* ParentActivityController.swift */,
 				184D85501EF1217C006BAF76 /* ParentChildController.swift */,
 				182BA2EC1EF13C830061E807 /* ParentDashboardController.swift */,
+				18919C481EF3F184006E3D12 /* ParentSliderMenuController.swift */,
 			);
 			name = Parent;
 			sourceTree = "<group>";
@@ -491,6 +581,7 @@
 				TargetAttributes = {
 					18F6A8181EEFDAEC001CD7D8 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = G8K2Q4JU8U;
 						ProvisioningStyle = Automatic;
 					};
 					18F6A82F1EEFDAEC001CD7D8 = {
@@ -579,12 +670,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				184D85391EF11F69006BAF76 /* StudentContactController.swift in Sources */,
+				18919C4D1EF3F1AB006E3D12 /* StudentSliderMenuController.swift in Sources */,
 				184D85571EF1220A006BAF76 /* TeacherSubjectsController.swift in Sources */,
 				184D85531EF121E7006BAF76 /* TeacherProfileController.swift in Sources */,
 				18F6A81D1EEFDAEC001CD7D8 /* AppDelegate.swift in Sources */,
 				182BA2EF1EF13CBF0061E807 /* TeacherDashboardController.swift in Sources */,
 				184D85431EF12012006BAF76 /* StudentProfileController.swift in Sources */,
 				182BA2EB1EF13C6D0061E807 /* StudentDashBoardController.swift in Sources */,
+				18B50A561EFAAF1400232E80 /* ContactChatTableCell.swift in Sources */,
 				187029481EF1514A00E7A4EF /* LoginCredentialsTableCell.swift in Sources */,
 				187029531EF1756300E7A4EF /* UIAppExtensions.swift in Sources */,
 				18CFD6F51EF0297A00D590F3 /* EZTabBar.swift in Sources */,
@@ -594,31 +687,43 @@
 				184D854D1EF12156006BAF76 /* ParentNotificationsController.swift in Sources */,
 				184D85491EF12132006BAF76 /* ParentSubjectController.swift in Sources */,
 				184D85471EF12120006BAF76 /* ParentContactController.swift in Sources */,
+				18DBCB581EFBB605003FF70A /* ActivityCollectionCell.swift in Sources */,
 				182BA2ED1EF13C830061E807 /* ParentDashboardController.swift in Sources */,
+				18E9F9831EF7B7B300E4705C /* CircleMenu.swift in Sources */,
 				184D855D1EF12241006BAF76 /* TeacherActivityController.swift in Sources */,
+				18DBCB341EFBA086003FF70A /* NotificationTableCell.swift in Sources */,
+				18919C471EF3EE63006E3D12 /* EZLabel.swift in Sources */,
 				184D854B1EF12143006BAF76 /* ParentReportController.swift in Sources */,
+				18919C441EF3DF68006E3D12 /* SideMenuTableCell.swift in Sources */,
 				187029461EF1512A00E7A4EF /* LoginModulesTableCell.swift in Sources */,
 				1870294B1EF1634F00E7A4EF /* SignupFormTableCell.swift in Sources */,
 				184D85591EF1221B006BAF76 /* TeacherReportController.swift in Sources */,
 				187029551EF1788A00E7A4EF /* EZTextField.swift in Sources */,
+				1876BFDB1EF96831004436DA /* EZUIElements.swift in Sources */,
 				18F6A8591EEFDF57001CD7D8 /* StudentSubjectsController.swift in Sources */,
+				18E9F9851EF7B7B300E4705C /* CircleMenuButton.swift in Sources */,
+				1876BFD71EF95E69004436DA /* StudentDetailTableCell.swift in Sources */,
 				184D855B1EF12230006BAF76 /* TeacherNotificationController.swift in Sources */,
-				18DA136A1EF25CFE00C2976F /* CircleOverlayView.swift in Sources */,
+				18919C491EF3F184006E3D12 /* ParentSliderMenuController.swift in Sources */,
 				184D855F1EF12251006BAF76 /* TeacherChildController.swift in Sources */,
 				184D854F1EF1216A006BAF76 /* ParentActivityController.swift in Sources */,
 				184D85511EF1217C006BAF76 /* ParentChildController.swift in Sources */,
 				187029501EF1747700E7A4EF /* UIAppViewController.swift in Sources */,
+				18D0CB1C1EF3B79B00E630F9 /* AppEnum.swift in Sources */,
 				184D853F1EF11FF2006BAF76 /* StudentActivityController.swift in Sources */,
+				18919C4F1EF4050D006E3D12 /* EZButton.swift in Sources */,
 				184D853D1EF11FDF006BAF76 /* StudentNotificationsController.swift in Sources */,
-				18DA136B1EF25CFE00C2976F /* CircleThumb.swift in Sources */,
+				18919C431EF3DF68006E3D12 /* SideMenuProfileTableCell.swift in Sources */,
+				1876BFD51EF95D0F004436DA /* StudentProfileTableCell.swift in Sources */,
 				18CFD6F01EEFFC2B00D590F3 /* SubjectsHeaderTableCell.swift in Sources */,
+				18E9F9841EF7B7B300E4705C /* CircleMenuLoader.swift in Sources */,
 				18F6A8251EEFDAEC001CD7D8 /* EyaalZayeed.xcdatamodeld in Sources */,
-				18DA13681EF25CFE00C2976F /* CircleGestureRecognizer.swift in Sources */,
 				182BA2E71EF13AC30061E807 /* SignupController.swift in Sources */,
-				18DA13691EF25CFE00C2976F /* CircleIconView.swift in Sources */,
+				18919C4B1EF3F198006E3D12 /* TeacherSliderMenuController.swift in Sources */,
 				184D85451EF12108006BAF76 /* ParentProfileController.swift in Sources */,
-				18DA13671EF25CFE00C2976F /* Circle.swift in Sources */,
+				18D0CB1E1EF3C6A500E630F9 /* HRToast+UIView.swift in Sources */,
 				184D85411EF12004006BAF76 /* StudentTimeTableController.swift in Sources */,
+				1876BFD91EF962F9004436DA /* EZTextView.swift in Sources */,
 				184D853B1EF11FCA006BAF76 /* StudentReportController.swift in Sources */,
 				184D85551EF121F7006BAF76 /* TeacherContactController.swift in Sources */,
 			);
@@ -708,7 +813,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -752,7 +857,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -764,7 +869,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G8K2Q4JU8U;
 				INFOPLIST_FILE = EyaalZayeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mkumar.EyaalZayeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -776,7 +883,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G8K2Q4JU8U;
 				INFOPLIST_FILE = EyaalZayeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mkumar.EyaalZayeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";

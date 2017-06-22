@@ -8,12 +8,26 @@
 
 import UIKit
 
-class ParentReportController: UIViewController {
+class ParentReportController: UIAppViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.addInitialUIChanges()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.addInitialUIChanges()
+    }
+    func addInitialUIChanges()
+    {
+        self.addStatusBar()
+        self.automaticallyAdjustsScrollViewInsets =  false
+        
+    }
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        
+        // self.navigationController?.popViewController(animated: true)
+        // _ = navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
